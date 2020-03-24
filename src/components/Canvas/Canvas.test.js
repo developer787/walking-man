@@ -5,8 +5,8 @@ import { screen  } from '@testing-library/dom'
 import Canvas from './Canvas';
 
 test('renders Canvas text', () => {
-  const { getByText } = render(<Canvas />);
-  const text = getByText(/Canvas/i);
-  screen.debug(text)
-  expect(text).toBeInTheDocument();
+  const { getByTestId } = render(<Canvas />);
+  const canvas = getByTestId("canvas");
+  screen.debug(canvas)
+  expect(canvas).toBeInTheDocument();
 });

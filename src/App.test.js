@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const canvas = getByText(/Canvas/i);
+  const { getByTestId } = render(<App />);
+  const canvas = getByTestId("canvas");
   expect(canvas).toBeInTheDocument();
 });
